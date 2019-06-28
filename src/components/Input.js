@@ -12,7 +12,7 @@ class Input extends Component {
     const task = {action: this.state.action}
 
     if(task.action && task.action.length > 0){
-      axios.post('/api/todos', task)
+      axios.post('https://heroku-test-fabrizio.herokuapp.com/api/todos', task)
         .then(res => {
           if(res.data){
             this.props.getTodos();
